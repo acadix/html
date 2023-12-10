@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aula 05 - Tags Input</title>
+  </head>
+  <body style="padding-bottom: 800px;">
+    <h1>Tags Input</h1>
+    <header>
+      <ul>
+        <li><a href="#div-text">Texto</a></li>
+        <li><a href="#div-number">Number</a></li>
+        <li><a href="#div-email">Email e Senha</a></li>
+        <li><a href="#div-checkbox">Checkbox</a></li>
+        <li><a href="#div-radio">Radio</a></li>
+        <li><a href="#div-range">Range</a></li>
+        <li><a href="#div-date">Date</a></li>
+        <li><a href="#div-color">Color</a></li>
+        <li><a href="#div-file">File</a></li>
+        <li><a href="#div-textarea">Área de Texto</a></li>
+        <li><a href="#div-select">Select</a></li>
+      </ul>
+      <hr />
+    </header>
+    <div id="div-text">
+      <h3>Text</h3>
+      <form action="#div-text">
+        <label for="nome">Nome:</label>
+        <input
+            placeholder="Preencha seu nome"
+            required
+            minlength="5"
+            maxlength="8"
+            type="text" 
+            name="nome" 
+            id="nome">
+        <input type="submit" value="Enviar">
+      </form>
+      <hr>
+    </div>
+    <div id="div-number">
+        <h3>Number</h3>
+        <form action="#div-number">
+            <label for="idade">Idade:</label>
+            <input 
+                min="0"
+                max="10"
+                step="0.5"
+                value="5"
+                type="number" 
+                name="idade" 
+                id="idade">
+                <input type="submit" value="enviar">
+        </form>
+        <hr>
+    </div>
+    <div id="div-email">
+        <h3>Email</h3>
+        <form action="" method="post">
+            <fieldset>
+                <legend>Login</legend>
+                <label for="email">
+                    Email:
+                </label>
+                <input
+                    required 
+                    type="email" 
+                    name="email" 
+                    id="email">
+                <br>
+                <label for="password">Senha:</label>
+                <input 
+                    required
+                    type="password" 
+                    name="password" 
+                    id="password">
+                <br>
+                <input type="submit" value="Enviar">
+            </fieldset>
+        </form>
+        <hr>
+    </div>
+    <div id="div-checkbox">
+        <h3>Checkbox</h3>
+        <form action="#div-checkbox">
+            <input 
+                checked
+                type="checkbox" 
+                name="checkbox" 
+                id="checkbox">
+            <label for="checkbox">Refrigerante</label>
+            <br />
+            <input 
+                disabled
+                type="checkbox" 
+                name="almoco" 
+                id="almoco" />
+            <label for="almoco">Almoço</label>
+            <br />
+            <input type="checkbox" name="sobremesa" id="sobremesa" />
+            <label for="sobremesa">Sobremesa</label>
+            <br />
+            <input type="submit" value="Enviar" />
+        </form>
+        <hr>
+    </div>
+    <div id="div-radio">
+        <h3>Radio</h3>
+        <input type="radio" name="plano" id="basic">
+        <label for="basic">basic</label>
+        <br>
+        <input type="radio" name="plano" id="pro">
+        <label for="pro">pro</label>
+        <br>
+        <input type="radio" name="plano" id="ultra">
+        <label for="ultra">ultra</label>
+        <hr>
+    </div>
+    <div id="div-range">
+        <h3>Range</h3>
+        <form action="#div-range">
+            <label for="volume">Volume:</label>
+            <input 
+                min="0"
+                max="50"
+                step="1"
+                value="10"
+                type="range" 
+                name="volume" 
+                id="volume">
+            <input type="submit" value="Enviar">
+        </form>
+        <hr>
+    </div>
+    <div id="div-date">
+        <h3>Date</h3>
+        <form action="#div-date">
+            <label for="data">Data:</label>
+            <input 
+                value="1912-12-10"
+                type="date">
+        </form>
+        <hr>
+    </div>
+    <div id="div-color">
+        <h3>Color</h3>
+        <form action="#div-color">
+            <label for="cor">Cor</label>
+            <input type="color" name="cor" id="cor">
+        </form>
+        <hr>
+    </div>
+    <div id="div-file">
+        <h3>Arquivo</h3>
+        <form 
+            action="#div-file" 
+            method="post"
+            enctype="multipart/form-data">
+            <label for="arquivo">Arquivo</label>
+            <input type="file">
+            <input type="submit" value="Enviar">
+        </form>
+        <hr>
+    </div>
+    <div id="div-textarea">
+        <h3>Text Area</h3>
+        <form action="">
+            <label for="textarea">Texto:</label>
+            <br>
+            <textarea 
+                name="textarea" 
+                id="textarea" 
+                cols="30" 
+                rows="10"></textarea>
+            <br>
+            <input type="submit" value="enviar">
+        </form>
+        <hr>
+    </div>
+    <div id="div-select">
+        <h3>Select</h3>
+        <form action="">
+            <label for="estado">Selecione o seu Estado</label>
+           <select name="estado" id="estado" required>
+            <option></option>
+            <option value="sp">São Paulo</option>
+            <option value="rj">Rio de Janeiro</option>
+            <option value="sp">Minas Gerais</option>
+           </select> 
+           <br>
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
+  </body>
+</html>

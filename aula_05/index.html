@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aula 05</title>
+  </head>
+  <body style="padding-bottom: 800px">
+    <header>
+      <h1>Aula 05 - Formulários</h1>
+      <ul>
+        <li><a href="#inputlabel">Tags Input e Label</a></li>
+        <li><a href="#form">Tag Form</a></li>
+        <li><a href="#fieldset">Tag Fieldset</a></li>
+      </ul>
+    </header>
+    <hr />
+    <div id="inputlabel">
+      <h3>Tags Input e Label</h3>
+      <label for="input1">Nome</label>
+      <input type="text" name="input1" id="input1" />
+      <br />
+      <label for="input2">Endereço</label>
+      <input type="text" name="input2" id="input2" />
+      <br />
+      <input type="submit" value="cadastre-se" />
+      <!-- <button type="submit">cadastre-se</button> -->
+    </div>
+    <hr />
+    <div id="form">
+      <h3>Tag Form</h3>
+      <!-- Link para testar o seu formulário -->
+      <!-- https://www.toptal.com/developers/postbin/ -->
+
+      <!-- MÉTODOS -->
+      <!-- GET-->
+      <!-- http://127.0.0.1:5500
+            /aula_05
+            /meu_arquivo.php
+            ?nome=Diogo
+            &sobrenome=Oliveira
+            &idade=32 -->
+
+      <!-- POST -->
+
+      <form
+        style="border: 1px solid red"
+        action="https://www.toptal.com/developers/postbin/1701889282471-6613663341850"
+        method="post"
+      >
+        <label for="nome">Nome:</label>
+        <input
+          type="text"
+          name="nome"
+          id="nome"
+          required
+          minlength="3"
+          maxlength="6"
+          value="Diogo"
+        />
+
+        <br />
+        <label for="sobrenome">Sobrenome:</label>
+        <input type="text" name="sobrenome" id="sobrenome" disabled />
+
+        <br />
+        <label for="idade" hidden>Idade:</label>
+        <input type="number" name="idade" id="idade" value="18" hidden />
+
+        <br />
+        <input type="submit" value="Enviar" />
+        <input type="reset" value="Limpar" />
+      </form>
+    </div>
+    <hr />
+    <div id="fieldset">
+      <h3>Fieldset</h3>
+      <form action="">
+        <fieldset>
+          <legend>Informações Pessoais</legend>
+          <label for="nome">Nome:</label>
+          <input
+            type="text"
+            name="nome"
+            id="nome"
+            required
+            minlength="3"
+            maxlength="6"
+            value="Diogo"
+          />
+          <label for="sobrenome">Sobrenome:</label>
+          <input type="text" name="sobrenome" id="sobrenome" disabled />
+        </fieldset>
+        <fieldset>
+          <legend>Endereço:</legend>
+          <label for="rua">Rua</label>
+          <input type="text" name="rua" id="rua" disabled />
+          <br />
+          <label for="numero">Número</label>
+          <input type="number" name="numero" id="numero" value="5" />
+          <br />
+          <label for="bairro">Bairro</label>
+          <input
+            type="text"
+            name="bairro"
+            id="bairro"
+            placeholder="Seu bairro"
+          />
+          <br />
+          <label for="cidade">Cidade</label>
+          <input type="text" name="cidade" id="cidade" />
+          <br />
+          <label for="estado">Estado</label>
+          <input type="text" name="estado" id="estado" />
+        </fieldset>
+        <br>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpar">
+      </form>
+    </div>
+  </body>
+</html>
